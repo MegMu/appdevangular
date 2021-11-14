@@ -1,0 +1,103 @@
+<header id="intro" style="display: block;">
+  <article class="fullheight" style="height: 568px;">
+    <div class="hgroup">
+      <h1>Scheduled Interviews</h1>
+      <p><a href="/#welcome"><img src="/assets/images/arrow.png" alt="down arrow"></a></p>
+    </div>
+  </article>
+  <div class="scrollmagic-pin-spacer"
+       style="display: block; top: auto; left: auto; bottom: auto; right: auto; position: relative; margin: 0 auto auto; box-sizing: content-box; width: 100%; min-height: 44px; height: auto; padding-top: 0; padding-bottom: 0;">
+  </div>
+</header>
+<main id="wrapper">
+  <div class="scene" id="welcome">
+    <article class="content">
+      <hr/>
+      <h1>Schedule Interviews</h1>
+      <form class="form-horizontal" [formGroup]="scheduleSearchForm" (ngSubmit)="createSchedule()">
+        <div class="form-group">
+          <label for="startTime" class="col-4">Start-Time:</label>
+          <div class="col=8">
+          <input for="startTime" type="string" class="form-control"
+          formControlName="startTime"/>
+          </div>
+        </div>
+        <br/>
+        <div class="form-group">
+          <label for="endTime" class="col-4">End-Time:</label>
+          <div class="col=8">
+          <input for="endTime" type="string" class="form-control"
+          formControlName="endTime"/>
+          </div>
+        </div>
+        <br/>
+        <div class="form-group">
+          <label for="candidateID" class="col-4">CandidateID:</label>
+          <div class="col=8">
+          <select id="candidateID" formControlName="candidateID">
+            <option *ngFor="let candidate of candidates" [value]="candidate.candidateID">
+              {{candidate.candidateID}}
+            </option> 
+          </select>
+          </div>
+        </div>
+        <br/>
+        <div class="form-group">
+          <label for="profile" class="col-4">JobProfile:</label>
+          <div class="col=8">
+          <select id="profile" formControlName="profile">
+            <option *ngFor="let profile of jobProfiles" [value]="profile.profile">
+              {{profile.profile}}
+            </option> 
+          </select>
+          </div>
+        </div>
+        <br/>
+        <div class="form-group">
+          <div class="col-offset-2 col-10">
+            <button type="submit" class="btn btn-primary btn-large">Schedule</button>
+          </div>
+        </div>
+      </form>
+    </article>
+  </div><!-- welcome -->
+  <div class="scene" id="interviewinfo">
+    <article class="heading">
+      <h1>Essential Info</h1>
+    </article>
+    <article id="usefulinfo">
+      <section id="scheduleinfo">
+        <h2>Book and host virtual interviews</h2>
+        <ul>
+          <li> Open up your talent pool and reduce the need for anyone to travel. Connect with MS Teams or Zoom and meet candidates online.
+          </li>
+        </ul>
+      </section>
+      <section class="checklist" id="services">
+        <h2>Features</h2>
+        <ul>
+          <li>Booking Page</li>
+          <li>Calendars</li>
+          <li>Panel Booking</li>
+          <li>Full service spa</li>
+          <li>Desktop Application</li>
+        </ul>
+      </section>
+    </article>
+  </div><!-- hotelinfo -->
+</main>
+<footer class="scene">
+  <article class="content">
+    <div id="socialmedia">
+      <ul class="group">
+        <li><a href="https://twitter.com/"><img class="icon" src="/assets/images/twitter.png"
+                                                alt="icon for twitter"></a></li>
+        <li><a href="http://www.facebook.com/"><img class="icon" src="/assets/images/facebook.png"
+                                                    alt="icon for facebook"></a></li>
+        <li><a href="http://www.youtube.com/"><img class="icon" src="/assets/images/youtube.png" alt="icon for youtube"></a>
+        </li>
+      </ul>
+    </div>
+  </article>
+</footer>
+<script src="/assets/images/script.js"></script>
