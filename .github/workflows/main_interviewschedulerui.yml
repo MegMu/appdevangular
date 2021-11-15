@@ -52,4 +52,4 @@ jobs:
           app-name: 'interviewschedulerui'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E44B8FB8874640C1A23D69797CC87EE7 }}
-          package: /home/runner/work/appdevangular/appdevangular/dist
+          package: .
