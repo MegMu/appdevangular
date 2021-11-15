@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./dist/interviewScheduleApp
+          path: /home/runner/work/appdevangular/appdevangular/dist/interviewScheduleApp
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,4 +52,4 @@ jobs:
           app-name: 'interviewschedulerui'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E44B8FB8874640C1A23D69797CC87EE7 }}
-          package: ./dist/interviewScheduleApp
+          package: /home/runner/work/appdevangular/appdevangular/dist/interviewScheduleApp
