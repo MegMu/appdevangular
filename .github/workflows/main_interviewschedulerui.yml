@@ -1,3 +1,11 @@
+The role my-workshop has been created.
+
+
+eiwpccue663toce7xbjrnjzny3g37zua44vgs242jh5bsea3ikqa
+
+
+----------------angular workflow
+
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
@@ -25,6 +33,12 @@ jobs:
         run: |
           npm install
           npm run build --if-present
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          name: node-app
+          path: ./dist/interviewScheduleApp
 
   deploy:
     runs-on: ubuntu-latest
